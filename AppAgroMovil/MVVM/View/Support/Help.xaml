@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppAgroMovil.MVVM.View.Support.Help"
+             Title="Help">
+
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Centro de Ayuda y Soporte"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,20" />
+
+            <Label Text="Pagina oficial de Facebook"
+                   TextColor="Blue"
+                   FontSize="18"
+                   HorizontalOptions="Start">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnDocumentationTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Buzón de Sugerencias"
+                   TextColor="Blue"
+                   FontSize="18"
+                   HorizontalOptions="Start">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnFAQTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Contacto con Soporte Técnico"
+                   TextColor="Blue"
+                   FontSize="18"
+                   HorizontalOptions="Start">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSupportTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

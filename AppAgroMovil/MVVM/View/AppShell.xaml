@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:data="clr-namespace:AppAgroMovil.MVVM.View.Data"
+             xmlns:support="clr-namespace:AppAgroMovil.MVVM.View.Support"
+             xmlns:user="clr-namespace:AppAgroMovil.MVVM.View.User"
+             xmlns:local="clr-namespace:AppAgroMovil"
+             x:Class="AppAgroMovil.MVVM.View.AppShell"
+             BackgroundColor="#CCBFFA"
+             >
+    
+    <Shell.FlyoutIcon>
+        
+        <FontImageSource Glyph="menu_open" 
+                         FontFamily="MaterialIcons" 
+                         Color="White" />
+    </Shell.FlyoutIcon>
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="White" HeightRequest="150">
+            <Image Source="edificio_ut.jpg" 
+                   Aspect="AspectFill" 
+                   Opacity=".5"/>
+
+            <Label FontSize="Large" 
+                   HorizontalOptions="Center" 
+                   Text="App Agro UTRNG" 
+                   TextColor="Black" 
+                   VerticalOptions="Center"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+    
+
+
+        <ShellContent Title="Datos" ContentTemplate="{DataTemplate data:DataAnalysis}">
+            <ShellContent.Icon Aspect="AspectFit"  WidthRequest="20" HeightRequest="20" >
+                <FontImageSource Glyph="monitoring" FontFamily="MaterialIcons" Color="Black" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+
+        <ShellContent Title="Recomendaciones" ContentTemplate="{DataTemplate user:AppUsers}">
+            <ShellContent.Icon Aspect="AspectFit"  WidthRequest="20" HeightRequest="20" >
+                <FontImageSource Glyph="person" FontFamily="MaterialIcons" Color="Black"/>
+            </ShellContent.Icon>
+        </ShellContent>
+
+
+        <ShellContent Title="Ayuda" ContentTemplate="{DataTemplate support:Help}">
+            <ShellContent.Icon Aspect="AspectFit"  WidthRequest="20" HeightRequest="20" >
+                <FontImageSource Glyph="help" FontFamily="MaterialIcons" Color="Black"/>
+            </ShellContent.Icon>
+        </ShellContent>
+
+
+    
+    
+    <Shell.FlyoutFooter>
+        <Grid Padding="15"
+              BackgroundColor="#CCBFFA"
+              HeightRequest="100"
+              RowDefinitions="*,*">
+            
+            <Label FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Text="Power By:"
+                   TextColor="Gray"/>
+
+            <Label Grid.Row="1" 
+                   FontAttributes="Bold"
+                   FontSize="25"
+                   HorizontalOptions="Center"
+                   Text=".Net MAUI"
+                   TextColor="Black"/>
+
+        </Grid>
+    </Shell.FlyoutFooter>
+
+
+</Shell>
